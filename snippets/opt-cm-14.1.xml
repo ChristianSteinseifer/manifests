@@ -55,7 +55,7 @@
   <project path="device/samsung/jflte" name="JDCTeam/android_device_samsung_jflte" remote="github" revision="opt-cm-14.1" />
 
   <!--Stock kernel-->
-  <project path=kernel/samsung/sidecore name="dkati/SideCore-CM-SGS4" remote="github" revision="cm-14.1" />
+  <project path="kernel/samsung/sidecore" name="dkati/SideCore-CM-SGS4" remote="github" revision="cm-14.1" />
   <remove-project name="CyanogenMod/android_kernel_samsung_jf" path="kernel/samsung/jf"  />
   
   <!--Alucard kernel and Ramdisk-->
