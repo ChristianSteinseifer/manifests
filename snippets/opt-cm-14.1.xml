@@ -4,46 +4,7 @@
 <!--Optimized CM 14.1 Required projects-->
   
   <!--Forked projects-->
-  
-  <!--Build-->
-  <remove-project name="LineageOS/android_build" path="build" />
-  <project path="build" name="JDCTeam/android_build"  remote="github" revision="opt-cm-14.1" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project> 
  
-  
-  <!--Core-->
-  <remove-project name="LineageOS/android_system_core" path="system/core" />
-  <project path="system/core" name="JDCTeam/android_system_core" remote="github" revision="opt-cm-14.1" />
-  
-  <!--Base-->
-  <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
-  <project path="frameworks/base" name="JDCTeam/android_frameworks_base" remote="github" revision="opt-cm-14.1" />
- 
-  <!--Telephony-->
-  <remove-project name="LineageOS/android_frameworks_opt_telephony" path="frameworks/opt/telephony" />
-  <remove-project name="LineageOS/android_packages_apps_CarrierConfig" path="packages/apps/CarrierConfig" />
-  <project path="frameworks/opt/telephony" name="JDCTeam/android_frameworks_opt_telephony" remote="github" revision="opt-cm-14.1" />
-  <project path="packages/apps/CarrierConfig" name="JDCTeam/android_packages_apps_CarrierConfig" remote="github" revision="opt-cm-14.1" />
- 
-  <!--Packages-->
-  <remove-project name="LineageOS/android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" />
-  <remove-project name="LineageOS/android_packages_apps_Settings" path="packages/apps/Settings" />
-  <remove-project name="LineageOS/android_packages_services_Telephony" path="packages/services/Telephony" />
-  <remove-project name="LineageOS/android_packages_apps_CMParts" path="packages/apps/CMParts"/>
-  <remove-project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" />
-  <project path="packages/apps/SetupWizard" name="JDCTeam/android_packages_apps_SetupWizard" remote="github" revision="opt-cm-14.1" />
-  <project path="packages/apps/Settings" name="JDCTeam/android_packages_apps_Settings" remote="github" revision="opt-cm-14.1" />
-  <project path="packages/services/Telephony" name="JDCTeam/android_packages_services_Telephony" remote="github" revision="opt-cm-14.1" />
-  <project path="packages/apps/CMParts" name="JDCTeam/android_packages_apps_CMParts" remote="github" revision="opt-cm-14.1" />
-  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" remote="github" revision="cm-14.1-wip"/>
-  <!--Custom projects-->
-  
-  <!--JDCSettings app-->
-  <project path="packages/apps/JDCSettings" name="JDCTeam/android_packages_apps_JDCSettings" remote="github" revision="opt-cm-14.1" />
-  
-  <!--Aroma-->
-  <project path="aroma" name="dkati/Optimized-AromaInstaller" remote="github" revision="opt-cm-14.1" />
   
   <!--Hardware-->
   <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="github" revision="cm-14.1" />
@@ -57,12 +18,7 @@
   <!--Stock kernel-->
   <project path="kernel/samsung/sidecore" name="dkati/SideCore-CM-SGS4" remote="github" revision="cm-14.1" />
   
-  <!--Alucard kernel and Ramdisk-->
-  <project path="kernel/cr-arm-eabi-4.9.4" name="Christopher83/arm-cortex_a15-linux-gnueabihf-linaro_4.9" remote="github" revision="master" />
-  <project path="kernel/samsung/alucard24" name="dkati/Alucard-Kernel-jfltexx" remote="github" revision="opt-cm-14.1" />
-  <project path="kernel/samsung/Ramdisk" name="JDCTeam/Ramdisk" remote="github" revision="opt-cm-14.1" />
-  <project path="packages/apps/STweaks" name="JDCTeam/STweaks" remote="github" revision="opt-cm-14.1" />
-  
+ 
    <!--Toolchains-->
     <!--Stock kernel-->
     <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="B--B/Custom_Toolchains" groups="pdk,linux,arm" remote="github" revision="arm-eabi-4.9-Linaro-generic" />
@@ -81,12 +37,6 @@
       <copyfile src="build.sh" dest="build.sh" />
   </project>
 
-  <!--Needed for complete build dir -->
-  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
-  <project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
-  <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" remote="aosp" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
+ 
 
 </manifest>
